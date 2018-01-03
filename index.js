@@ -18,7 +18,7 @@ restService.post("/echo", function(req, res) {
     req.body.result &&
     req.body.result.parameters &&
     req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
+      ? req.body.fulfillment.messages.speech
       : "Desculpa eu não entendi, pode repetir?";
   return res.json({
     speech: speech,
