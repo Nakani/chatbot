@@ -20,16 +20,10 @@ restService.post("/echo", function(req, res) {
       ? req.body.result.fulfillment.messages.speech
       : "Desculpa eu não entendi, pode repetir?";
 
-      // var opcoes = req.body.result.metadata.intentName;
-      // var filter = opcoes.split("-");
-      // switch(filterClean[1]){    
-      // }
-
   return res.json({
     speech: speech,
     displayText: speech,
-    source: "chatbot service pascal",
-    partners:{}
+    source: "chatbot service pascal"
   });
 });
 
