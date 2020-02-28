@@ -28,7 +28,7 @@ restService.post("/echo", function(req, res) {
 
 restService.post("/audio", function(req, res) {
   var speech = "";
-  switch (req.body.result.parameters.AudioSample.toLowerCase()) {
+  switch (req.body.result.parameters.oquebff.toLowerCase()) {
     //Speech Synthesis Markup Language
     case "musica um":
       speech = "foi pedido musica um";
@@ -38,6 +38,9 @@ restService.post("/audio", function(req, res) {
       break;
     case "musica tres":
       speech = "foi pedido musica tres";
+      break;
+    case "bff":
+      speech = "Exemplo de uso com o bff";
       break;
   }
   return res.json({
